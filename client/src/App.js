@@ -1,7 +1,14 @@
 import './App.css';
+import InputTodo from './components/InputTodo';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div class="container">
+        <InputTodo />
+      </div>
+    </>
+  );
 }
 
 export default App;
