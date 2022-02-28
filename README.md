@@ -4,6 +4,7 @@ a todo app using postgres, express, react and node
 
 
 
-## Yelp
+# Yelp
 
 a Yelp clone using postgres, express, react and node
+
