@@ -2,10 +2,12 @@ const express = require('express');
 const morgan = require('morgan');
 require('dotenv').config();
 const db = require('./db');
+const cors = require('cors');
 
 const app = express();
-app.use(morgan('dev'));
 app.use(express.json());
+app.use(morgan('dev'));
+app.use(cors());
 
 //  get all restaurants
 app.get('/api/v1/restaurants', async (req, res, next) => {
@@ -35,7 +37,7 @@ app.get('/api/v1/restaurants/:id', async (req, res, next) => {
     res.status(200).json({
       status: 'success',
       data: {
-        restaurants: result.rows[0],
+        restaurant: result.rows[0],
       },
     });
   } catch (error) {
